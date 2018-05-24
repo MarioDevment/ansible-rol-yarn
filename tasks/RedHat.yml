@@ -1,0 +1,11 @@
+---
+- name: Add Yarn Repositories
+  sudo: yes
+  copy:
+    src: ./files/yarn.repo
+    dest: /etc/yum.repos.d/
+
+- name: Install yarn
+  sudo: yes
+  yum:
+    name: yarn
